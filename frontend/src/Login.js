@@ -15,7 +15,7 @@ const login = async ()=>{
 try{
 
 const res = await axios.post(
-"http://localhost:5000/login",
+"https://auth-dashboard-api.onrender.com/login",
 { email, password }
 )
 

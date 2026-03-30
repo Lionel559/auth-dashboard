@@ -45,7 +45,7 @@ useEffect(()=>{
 const token = localStorage.getItem("token")
 
 axios.get(
-"http://localhost:5000/profile",
+"https://auth-dashboard-api.onrender.com/profile",
 {
 headers:{ authorization:token }
 }
@@ -54,7 +54,7 @@ setUser(res.data.user)
 setLoading(false)
 })
 
-axios.get("http://localhost:5000/users")
+axios.get("https://auth-dashboard-api.onrender.com/users")
 .then(res=>{
 setUsers(res.data)
 })
@@ -70,7 +70,7 @@ navigate("/")
 
 const deleteUser = async(id)=>{
 
-await axios.delete(`http://localhost:5000/users/${id}`)
+await axios.delete(`https://auth-dashboard-api.onrender.com/users/${id}`)
 
 setUsers(users.filter(user => user.id !== id))
 
@@ -90,7 +90,7 @@ setEditEmail(user.email)
 
 const updateUser = async ()=>{
 
-await axios.put(`http://localhost:5000/users/${editUser.id}`,{
+await axios.put(`https://auth-dashboard-api.onrender.com/users/${editUser.id}`,{
 name:editName,
 email:editEmail
 })

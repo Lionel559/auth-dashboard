@@ -16,7 +16,7 @@ const register = async ()=>{
 try{
 
 await axios.post(
-"http://localhost:5000/register",
+"https://auth-dashboard-api.onrender.com/register",
 { name,email,password }
 )
 
