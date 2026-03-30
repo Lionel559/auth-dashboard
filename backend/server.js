@@ -88,7 +88,6 @@ res.status(401).json({message:"Invalid token"})
 })
 
 /* GET ALL USERS */
-
 app.get("/users",(req,res)=>{
 
 const cleanUsers = users.map(u => ({
@@ -102,7 +101,6 @@ res.json(cleanUsers)
 })
 
 /* DELETE USER */
-
 app.delete("/users/:id",(req,res)=>{
 
 const id = parseInt(req.params.id)
@@ -114,11 +112,9 @@ res.json({message:"User deleted"})
 })
 
 /* UPDATE USER */
-
 app.put("/users/:id",(req,res)=>{
 
 const id = parseInt(req.params.id)
-
 const {name,email} = req.body
 
 users = users.map(u =>
