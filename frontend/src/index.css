@@ -556,3 +556,45 @@ animation:skeletonMove 1.2s infinite;
 0%{background-position:200% 0;}
 100%{background-position:-200% 0;}
 }
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+.dashboard{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+flex-direction:row;
+justify-content:space-around;
+padding:15px;
+}
+
+.sidebar ul{
+display:flex;
+gap:15px;
+}
+
+.sidebar li{
+padding:0;
+font-size:14px;
+}
+
+.main{
+padding:20px;
+}
+
+.cards{
+flex-direction:column;
+}
+
+.card{
+width:100%;
+}
+
+.search{
+width:100%;
+}
+
+}
